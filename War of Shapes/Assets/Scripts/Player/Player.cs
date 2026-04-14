@@ -25,6 +25,6 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-
+        rb.linearVelocity = new Vector2(moveInputX * speed, moveInputY * speed);
     }
 }
