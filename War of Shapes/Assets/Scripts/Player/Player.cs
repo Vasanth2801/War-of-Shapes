@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     private void Update()
     {
         moveInputX = Input.GetAxisRaw("Horizontal");
-        moveInputY = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
@@ -25,6 +24,6 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        rb.linearVelocity = new Vector2(moveInputX * speed, moveInputY * speed);
+        rb.linearVelocity = new Vector2(moveInputX * speed, rb.linearVelocity.y);
     }
 }
