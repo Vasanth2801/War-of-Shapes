@@ -33,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
         if (currentWave > waves.Length)
         {
             Debug.Log("Wave Spawned");
+            UIManager.Instance.WinScreen();
             return;
         }
 
