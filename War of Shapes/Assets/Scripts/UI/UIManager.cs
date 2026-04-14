@@ -55,10 +55,24 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 
     public void Menu()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+    }
+
+    public void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+
+    public void WinScreen()
+    {
+        winGamePanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
